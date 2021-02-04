@@ -31,6 +31,5 @@ jobs:
               uses: zsfVishnu-d11/pull-request-action@v1
               env:
                 PULL_REQUEST_BRANCH: "master"
-                GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                 PULL_REQUEST_BODY: "🚀 Opening a pull request for this branch"
-# 
