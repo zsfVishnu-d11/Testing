@@ -8,8 +8,6 @@ on:
   push:
     branches: 
       - develop
-      - main
-      - master
  
 
 
@@ -28,25 +26,9 @@ jobs:
             - uses : actions/checkout@v2
               with:
                 fetch-depth: 0 
-#             - name: Reset base branch
-#               run: |
-#                 git fetch origin develop:develop
-#                 git reset --hard develop
+
             - name: Create Pull Request
-              uses: zsfVishnu-d11/create-pull-request@v3
-              with:
-                branch: develop
-#               with:
-#                 fetch-depth: 0
-            
-# #             - name: reset branch
-# #               run: |
-# #                 git fetch origin develop
-# #                 git reset --hard develop
-#             - name: pull-request-action
-#               uses: zsfVishnu-d11/create-pull-request@v3
-#               with:
-#                 branch: main
-#               env:
-#                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#                 PULL_REQUEST_BRANCH: "master"
+              uses: zsfVishnu-d11/pull-request-action@v1
+              env:
+                PULL_REQUEST_BRANCH: "master"
+# 
