@@ -3,7 +3,7 @@ final_dictionary['global'] = 'global_sheet'
 final_dictionary['alias'] = 'alias_sheet'
 final_dictionary['category'] = 'token'
 final_dictionary['version'] = 'version'
-
+version = '1.0.1'
 print(version)
 
 with open(ROOT_DIR+'/../jsons/' + token + '.json','w') as outfile:
