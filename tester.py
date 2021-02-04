@@ -9,3 +9,5 @@ print(version)
 
 with open('sample.json','w') as outfile:
   json.dump(final_dictionary,outfile,indent = 4)
+  print("DUMPING")
+print(final_dictionary)
