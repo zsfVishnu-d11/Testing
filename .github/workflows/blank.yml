@@ -32,4 +32,5 @@ jobs:
               env:
                 PULL_REQUEST_BRANCH: "master"
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                PULL_REQUEST_FROM_BRANCH: "develop"
                 PULL_REQUEST_BODY: "🚀 Opening a pull request for this branch"
