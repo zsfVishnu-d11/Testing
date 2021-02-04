@@ -6,5 +6,5 @@ final_dictionary['version'] = 'version'
 version = '1.0.1'
 print(version)
 
-with open(ROOT_DIR+'/../jsons/' + token + '.json','w') as outfile:
+with open('sample.json','w') as outfile:
   json.dump(final_dictionary,outfile,indent = 4)
