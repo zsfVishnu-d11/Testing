@@ -10,6 +10,7 @@ on:
       - develop
  
 
+
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -23,7 +24,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
             - name: pull-request-action
-              uses: zsfVishnu-d11/pull-request-action@1.0.12
+              uses: zsfVishnu-d11/pull-request-action@1.0.13
               env:
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                 PULL_REQUEST_BRANCH: "master"
