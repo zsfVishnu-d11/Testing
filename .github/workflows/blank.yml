@@ -27,12 +27,12 @@ jobs:
             
             - name: reset branch
               run: |
-                git fetch origin main:main
-                git reset --hard master
+                git fetch origin develop
+                git reset --hard develop
             - name: pull-request-action
               uses: zsfVishnu-d11/create-pull-request@v3
               with:
-                branch: develop
+                branch: main
               env:
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                 PULL_REQUEST_BRANCH: "master"
