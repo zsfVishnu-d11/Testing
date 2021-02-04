@@ -24,8 +24,15 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
             - uses : actions/checkout@v2
+            
+            - name: reset branch
+              run: |
+                git fetch origin master:master
+                git reset --hard master
             - name: pull-request-action
               uses: zsfVishnu-d11/create-pull-request@v3
+              with:
+                branch: develop
               env:
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                 PULL_REQUEST_BRANCH: "master"
