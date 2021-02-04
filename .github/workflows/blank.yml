@@ -27,7 +27,7 @@ jobs:
             
             - name: reset branch
               run: |
-                git fetch origin master:master
+                git fetch origin main:main
                 git reset --hard master
             - name: pull-request-action
               uses: zsfVishnu-d11/create-pull-request@v3
