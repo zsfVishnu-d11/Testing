@@ -28,7 +28,7 @@ jobs:
                 fetch-depth: 0 
 
             - name: Create Pull Request
-              uses: zsfVishnu-d11/pull-request-action@v1
+              uses: vsoch/pull-request-action@v1
               env:
                 PULL_REQUEST_BRANCH: "master"
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
