@@ -26,12 +26,18 @@ jobs:
             - uses : actions/checkout@v2
               with:
                 fetch-depth: 0 
+                
+            - name: Derive from branch name
+              run: |
+                  # do custom parsing of your code / date to derive a branch from
+                  PR_BRANCH_FROM=release-v$(cat VERSION)
+                  export "PULL_REQUEST_FROM_BRANCH=${PR_BRANCH_FROM}" >> $GITHUB_ENV
 
             - name: Create Pull Request
               uses: zsfVishnu-d11/pull-request-action@1.0.13
               env:
                 PULL_REQUEST_BRANCH: "master"
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-                PULL_REQUEST_FROM_BRANCH: "develop"
+#                 PULL_REQUEST_FROM_BRANCH: "develop"
                 PASS_ON_ERROR: true
                 PULL_REQUEST_BODY: "🚀 Opening a pull request for this branch"
